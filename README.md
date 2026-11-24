@@ -92,7 +92,7 @@ quarter, 72 h horizon), and are scored on real vessel counts and hours.
 # PSLD (graph-free model reported in the paper)
 python models/train_psld.py                       # -> results/checkpoints/psld.pt, results/psld_quantiles.npy
 
-# Graph baselines: point head (Table I) and nine-quantile head (Table II)
+# Graph baselines: point head and nine-quantile head
 python models/train_stgnn.py gwnet
 python models/train_stgnn.py dcrnn
 python models/train_stgnn.py gwnet --head quantile
@@ -101,7 +101,7 @@ python models/train_stgnn.py dcrnn --head quantile
 # Classical baselines: seasonal-naive, climatology, VAR, SARIMA
 python models/run_baselines.py
 
-# Tables I and II
+# Model evaluation
 python models/score_east.py                       # -> results/table_mae.csv, table_crps.csv
 ```
 
@@ -128,4 +128,4 @@ the docstring at the top of each script.
 ## Data availability
 
 The AIS archive is publicly available from the U.S. Marine Cadastre. No data derived from it is
-distributed with this repository; the pipeline regenerates all of it.
+included in this repository; the data pipeline regenerates all of it.
