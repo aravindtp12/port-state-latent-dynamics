@@ -86,7 +86,7 @@ Splits are chronological: training to 2025-12-31, validation 2026-01-01 to 2026-
 ## 2. Models
 
 All models see the same tensors, splits and rolling test origins (every 24 h through the test
-quarter, 72 h horizon, 87 origins), and are scored on real vessel counts and hours.
+quarter, 72 h horizon), and are scored on real vessel counts and hours.
 
 ```bash
 # PSLD (graph-free model reported in the paper)
@@ -105,7 +105,7 @@ python models/run_baselines.py
 python models/score_east.py                       # -> results/table_mae.csv, table_crps.csv
 ```
 
-West Coast transfer (Table III). PSLD is applied to the unseen complexes with the East Coast
+West Coast transfer: PSLD is applied to the unseen complexes with the East Coast
 weights unchanged (`zeroshot`), and optionally fine-tuned on West Coast training data
 (`finetune`); the classical and graph baselines are fitted directly on West Coast data:
 
