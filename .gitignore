@@ -1,0 +1,34 @@
+# data, results and figures -- never committed (everything the code writes goes under data/)
+data/
+*.parquet
+*.npy
+*.npz
+*.pt
+*.duckdb
+*.zst
+*.shp
+*.dbf
+*.shx
+*.cpg
+*.prj
+
+# images and documents
+*.png
+*.pdf
+*.svg
+*.jpg
+*.jpeg
+
+# local archive of earlier work (experiments, notes, intermediate data), not part of the release
+archive/
+
+# environments, caches, editor / tool files
+.venv/
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+.claude/
+.ipynb_checkpoints/
+archive/
+figures/
