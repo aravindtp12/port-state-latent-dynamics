@@ -1,7 +1,6 @@
 # PSLD: Port State Latent Dynamics
 
-Code for **"A World Modeling Forecasting Framework for Maritime Port Operations Management"**
-(Manoj and Madisetti): an observation-driven latent-dynamics model that forecasts the operational state of seaports from
+Code for **"A World Modeling Forecasting Framework for Maritime Port Operations Management"**: an observation-driven latent-dynamics model that forecasts the operational state of seaports from
 AIS data. It is trained on eleven North American East Coast port complexes (hourly, 72 h ahead)
 and applied to three unseen West Coast complexes.
 
@@ -41,8 +40,7 @@ pip install -r requirements.txt
 
 * Python 3.10 or newer; developed on 3.14.
 * PyTorch picks CUDA, then Apple MPS, then CPU. The paper's runs used an Apple M4 Pro (14 cores,
-  24 GB, MPS); a PSLD run takes about ten minutes there, Graph WaveNet about sixteen and DCRNN about
-  fifty-four. SARIMA dominates the classical baselines' run time.
+  24 GB, MPS);
 * DuckDB installs its `h3` extension from the community repository on first use, so the pipeline
   needs internet access.
 * Disk: the AIS archive is about 41 GB compressed, but raw files are streamed (downloaded,
